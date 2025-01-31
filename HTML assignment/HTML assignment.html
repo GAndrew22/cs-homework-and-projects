@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group.inline {
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            flex: 1;
+            transition: box-shadow 0.2s;
+        }
+
+        input:focus {
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            border-color: #007bff;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center; /* 确保内容在同一高度 */
+            gap: 0.5rem; /* 添加间距 */
+            margin-bottom: 1rem;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-container p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            flex: 1; /* 让文本占据剩余空间 */
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p .register-highlight {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0 0.3rem;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .register-btn {
+            flex: 1;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 0.7rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .register-btn:hover {
+            background-color: #004494;
+        }
+
+        .signin-btn {
+            flex: 1;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 0.7rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .signin-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="signup-form">
+            <h1>Sign Up</h1>
+            <div class="form-group inline">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="mobile" placeholder="Mobile No." required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group inline">
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <div class="checkbox-container">
+                <div class="checkbox">
+                    <input type="checkbox" name="agree" required>
+                    <label>I Agree</label>
+                </div>
+                <p>
+                    By clicking <span class="register-highlight">Register</span>, you agree to the <a href="#">Terms and Conditions</a> set out by this site, including our Cookie Use.
+                </p>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="register-btn">Register</button>
+                <button type="button" class="signin-btn">Sign In</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
